@@ -45,7 +45,6 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
             "/resources/images/**",
             "/resources/static/**",
             "/api/v1/prescription",
-            "/dailyCountReport"
     };
     @Override
     protected void configure(HttpSecurity http) throws Exception {

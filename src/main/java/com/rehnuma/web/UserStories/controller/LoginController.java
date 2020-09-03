@@ -61,12 +61,19 @@ public class LoginController {
         return "redirect:/login";
     }
 
+    @GetMapping("/")
+    public String rootHome(HttpServletRequest request, Model model) {
+        model.addAttribute("prescription", new Prescription());
+        return "home";
+    }
+
 
     @GetMapping("/home")
     public String home(HttpServletRequest request, Model model) {
         model.addAttribute("prescription", new Prescription());
         return "home";
     }
+
 
 
 }

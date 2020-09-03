@@ -6,9 +6,13 @@
 <head>
     <jsp:include page="header.jsp"/>
 </head>
-<body>
+<body class="login-body">
+<div class="loginSecs">
 <div class="section">
-    <div class="container login">
+    <div class="appTitle">Prescription Generator</div>
+</div>
+<div class="section">
+    <div class="login">
         <form:form modelAttribute="user" method="POST" action="/login">
             <c:if test="${not empty error}">
                 <div class="alert alert-danger">
@@ -16,7 +20,7 @@
                 </div>
             </c:if>
             <div class="form-group">
-                <label for="email">Email address</label>
+                <label for="email">Email</label>
                 <form:input path="email"
                             type="email"
                             class="form-control"
@@ -32,9 +36,12 @@
                             id="exampleInputPassword1"
                             placeholder="Password"/>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="btnDiv">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form:form>
     </div>
+</div>
 </div>
 </body>
 </html>

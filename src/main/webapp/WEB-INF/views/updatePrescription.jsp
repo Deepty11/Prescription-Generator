@@ -39,7 +39,7 @@
 
 </head>
 <body>
-
+<jsp:include page="navbar.jsp"/>
 <div class="section">
     <div class="container">
         <c:if test="${not empty successMessage}">

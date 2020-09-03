@@ -5,7 +5,6 @@
   User: rehnuma
   Date: 9/1/20
   Time: 7:07 PM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -45,9 +44,9 @@
 
     <jsp:include page="header.jsp"/>
 </head>
-<body>
+<body class="createPrescription-body">
 <jsp:include page="navbar.jsp"/>
-<div class=" container createPrescription-div"><h2>Create Prescription</h2></div>
+<div class="container createPrescription-div">Create Prescription</div>
 <div class="section">
     <div class="container form-container">
         <c:if test="${not empty successMessage}">

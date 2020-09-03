@@ -49,29 +49,30 @@
 
     </script>
 </head>
-<body>
+<body class="showPrescriptions-body">
 <jsp:include page="navbar.jsp"/>
-<div class="section">
-    <div class=" container createPrescription-div"><h2>View Prescription</h2></div>
-    <div class=" container ">
-        <form:form modelAttribute="monthRange" class="selectMonth-div" method="POST">
-            <label>Enter Month:</label>
-            <div class="input-append date"
-                 style="margin-left: 0.5rem; padding-left: 0.5rem;">
-                <form:input path="month"
-                            type="month"
-                            min="1950-01"
-                            max="2030-12"
-                            class="form-control"
-                            id="month"
-                            value=""
-                            placeholder="YYYY/MM"
-                />
-            </div>
-            <div style="margin-left: 1rem;">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form:form>
+<div class="">
+    <div class="showtable-headline">View Prescriptions</div>
+         <div class=" container ">
+            <form:form modelAttribute="monthRange" class="selectMonth-div" method="POST">
+                <label>Enter Month:</label>
+                <div class="input-append date"
+                     style="margin-left: 0.5rem; padding-left: 0.5rem;">
+                    <form:input path="month"
+                                type="month"
+                                min="1950-01"
+                                max="2030-12"
+                                class="form-control"
+                                id="month"
+                                value="2020-09"
+                                placeholder="YYYY/MM"
+                    />
+                </div>
+                <div style="margin-left: 1rem;">
+                    <button type="submit"
+                            class="btn btn-primary button-div">Submit</button>
+                </div>
+            </form:form>
 
     </div>
     <div class="table-container">
