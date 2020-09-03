@@ -1,0 +1,71 @@
+body{
+    flex-wrap: wrap;
+}
+
+/*Navbar*/
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+}
+.login {
+    width: 50%;
+    margin:20rem;
+    padding: 5rem;
+    border-radius: .5rem;
+    background-color: cadetblue;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 1.2rem;
+}
+/*show table*/
+
+.createPrescription-div{
+    align-content: center;
+    transform: translateX(60%);
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    box-shadow: cadetblue;
+    flex-wrap: wrap;
+}
+.form-container{
+    align-content: center;
+    transform: translateX(30%);
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    box-shadow: cadetblue;
+    flex-wrap: wrap;
+
+}
+/*show prescriptions*/
+.selectMonth-div{
+    display: flex;
+    transform: translateX(80%);
+}
+
+.table-container{
+    display: flex;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    box-shadow: cadetblue;
+    flex-wrap: wrap;
+
+}
+/*--modal-*/
+.modal-div{
+    width: 100rem;
+}
+/*update prescription*/
+
+.headline-div{
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    position: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.updateForm-div{
+    flex-wrap: wrap;
+}

@@ -1,0 +1,1 @@
+INSERT INTO user VALUES(1,"xyz@test.com","1234");
