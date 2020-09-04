@@ -21,6 +21,7 @@ public class PrescriptionAPIController {
 
         List<Prescription> prescriptionList=prescriptionServices.findAllPrescriptions();
 
+        //Return as json Object in the response body
         return new ResponseEntity<>(prescriptionList, HttpStatus.OK);
 
     }

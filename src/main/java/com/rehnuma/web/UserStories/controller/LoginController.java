@@ -64,7 +64,7 @@ public class LoginController {
     @GetMapping("/")
     public String rootHome(HttpServletRequest request, Model model) {
         model.addAttribute("prescription", new Prescription());
-        return "home";
+        return "redirect:/home";
     }
 
 

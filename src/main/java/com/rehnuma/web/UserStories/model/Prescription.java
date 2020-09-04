@@ -5,6 +5,7 @@ import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
+import javax.persistence.metamodel.IdentifiableType;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +15,7 @@ import java.util.Date;
 public class Prescription {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "date")
@@ -42,14 +43,14 @@ public class Prescription {
 
     }
 
-    public Prescription(int id, String date,
+    public Prescription( String date,
                         String patient_name,
                         String age,
                         String gender,
                         String diagnosis,
                         String medicines,
                         String next_visit_date) {
-        this.id = id;
+        
         this.date = date;
         this.patient_name = patient_name;
         this.age = age;
