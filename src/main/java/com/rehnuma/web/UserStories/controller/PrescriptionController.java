@@ -31,7 +31,8 @@ public class PrescriptionController {
     public String storePrescription(@ModelAttribute Prescription prescription,
                                     BindingResult result,
                                     HttpServletRequest request,
-                                    Model model) {
+                                    Model model,
+                                    RedirectAttributes redirectAttributes) {
         System.out.println(prescription.getId()
                 + "\n" + prescription.getDate()
                 + "\n" + prescription.getPatient_name()
@@ -41,13 +42,14 @@ public class PrescriptionController {
                 + "\n" + prescription.getDiagnosis()
                 + "\n" + prescription.getMedicines());
         Prescription storedPrescription = prescriptionServices.savePrescription(prescription);
+
         if (storedPrescription != null) {
-            request.setAttribute("successMessage", "Prescription saved successfully");
-            model.addAttribute("prescription", new Prescription());
-            return "home";
+            //request.setAttribute("successMessage", "Prescription saved successfully");
+            redirectAttributes.addFlashAttribute("successMessage", "Prescription saved successfully" );
+            return "redirect:/home";
         } else {
             request.setAttribute("failureMessage", "Error while saving prescription.Try again!");
-            return "home";
+            return "redirect:/home";
         }
     }
 
